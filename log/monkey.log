@@ -1,0 +1,4 @@
+2020-09-14 10:29:32  [ main:0 ] - [ INFO ]  hello log info 
+2020-09-14 10:31:39  [ main:0 ] - [ INFO ]  hello log info 
+2020-09-14 10:32:16  [ main:0 ] - [ ERROR ]  hello log info 
+2020-09-14 10:35:46  [ main:0 ] - [ ERROR ]  hello log info 

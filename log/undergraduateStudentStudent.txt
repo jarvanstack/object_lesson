@@ -1,0 +1,1 @@
+UndergraduateStudentStudent{Student{name='邓嘉文', studentId='2019214951', credit='100', grade='2019'}teacherName='周渝陇', researchDirection='大数据'}
