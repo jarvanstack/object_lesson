@@ -16,6 +16,8 @@
         <module>q-design-面积计算-04</module>
         <module>q-design-学生类的设计和实现-05</module>
         <module>q-design-string原型类的设计与实现-06</module>
+        <module>q-design-基于链栈实现老鼠走迷宫问题-07</module>
+        <module>GreedySnack</module>
     </modules>
     <dependencies>
         <!-- log4j -->
