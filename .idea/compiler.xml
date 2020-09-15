@@ -8,13 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="q-design-多重继承类操作练习-02" />
         <module name="q-design-静态成员操作" />
-        <module name="q-design" />
         <module name="q-design-学生类的设计和实现-05" />
         <module name="q-debug-01-猴子" />
         <module name="q-design-有访问限制的类系设计-03" />
         <module name="q-design-面积计算-04" />
         <module name="q-design-基于链栈实现老鼠走迷宫问题-07" />
         <module name="q-design-string原型类的设计与实现-06" />
+        <module name="q-design" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
