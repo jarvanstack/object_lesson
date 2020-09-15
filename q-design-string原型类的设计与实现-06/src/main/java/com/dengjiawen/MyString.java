@@ -2,6 +2,7 @@ package com.dengjiawen;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * imitate the String class .
@@ -15,9 +16,18 @@ public class MyString {
     public MyString(String value) {
         this.value = value.toCharArray();
     }
+
     //3.1.1 ignored case
     public MyString(char[] valueChars) {
         this.value = valueChars;
+    }
+
+    public MyString(List<Character> characterList) {
+        char[] chars = new char[characterList.size()];
+        for (int i = 0; i < characterList.size(); i++) {
+            chars[i] = characterList.get(i);
+        }
+        this.value = chars;
     }
 
     public String toString() {
@@ -226,5 +236,88 @@ public class MyString {
         return ((beginIndex == 0) && (endIndex == value.length)) ? this
                 : new MyString(Arrays.copyOfRange(value, beginIndex, endIndex));
     }
+
+    /**
+     * trim all the whitespace.
+     *
+     * @return MyString that been trim all whitespace
+     */
+    public MyString trimAll() {
+        ArrayList characters = new ArrayList<Character>();
+        for (int i = 0; i < this.value.length; i++) {
+            characters.add(this.value[i]);
+        }
+        for (int i = 0; i < characters.size(); i++) {
+            if (characters.get(i).equals(' ')) {
+                characters.remove(i);
+            }
+        }
+        return new MyString(characters);
+    }
+
+    /**
+     * remove the same words that near each other.
+     * this need to update
+     *
+     * @return
+     */
+    public MyString removeSameAndNear() {
+        ArrayList characters = new ArrayList<Character>();
+        for (int i = 0; i < this.value.length; i++) {
+            characters.add(this.value[i]);
+        }
+
+        for (int i = 0; i < (characters.size() - 1); i++) {
+            if (characters.get(i + 1).equals(characters.get(i))) {
+                Object o = characters.get(i);
+            }
+        }
+        return new MyString(characters);
+    }
+
+    /**
+     * only replace the first string with [newString]
+     *
+     * @param oldString
+     * @param newString
+     * @return
+     */
+    public MyString replaceFirst(String oldString, String newString) {
+        String replace = this.toString().replace(oldString, newString);
+        return new MyString(replace);
+    }
+
+    /**
+     * insert a word at index [insertIndex]
+     *
+     * @param insertString
+     * @param insertIndex
+     * @return
+     */
+    public MyString insert(String insertString, int insertIndex) {
+
+        StringBuilder sb = new StringBuilder(this.toString());
+        sb.insert(insertIndex, insertString);
+        return new MyString(sb.toString());
+    }
+
+    /**
+     * remove a word from start index to end index.
+     * @param startRemoveIndex
+     * @param endRemoveIndex
+     * @return
+     */
+    public MyString removeAtIndex(int startRemoveIndex, int endRemoveIndex) {
+        char[] chars = this.value;
+        ArrayList<Character> characters = new ArrayList<>();
+        for (int i = 0; i < chars.length; i++) {
+            characters.add(chars[i]);
+        }
+        for (int i = startRemoveIndex; i < endRemoveIndex; i++) {
+            characters.remove(i);
+        }
+        return new MyString(characters);
+    }
+
 
 }
