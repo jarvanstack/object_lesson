@@ -30,7 +30,7 @@ public class Triangle extends Line {
     /**
      * calculate the area of the triangle.
      */
-    public double getAreaOfTraingle() {
+    public double getAreaOfTriangle() {
         double edgeA = new Line(getX1(), getY1(), getX2(), getY2()).getLineLength();
         double edgeB = new Line(getX1(), getY1(), getX3(), getY3()).getLineLength();
         double edgeC = new Line(getX2(), getY2(), getX3(), getY3()).getLineLength();

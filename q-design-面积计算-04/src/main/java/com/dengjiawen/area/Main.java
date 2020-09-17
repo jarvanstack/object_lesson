@@ -10,8 +10,8 @@ public class Main {
         Triangle triangle1 = new Triangle(0, 0, 1, 0, 0, 1);
         Triangle triangle2 = new Triangle(2, 4, 6, 7, 5, 8);
         Triangle triangle3 = new Triangle(1, 2, 3, 6, 9, 9);
-        System.out.println("the area of triangle1="+triangle1.getAreaOfTraingle());
-        System.out.println("the area of triangle2="+triangle2.getAreaOfTraingle());
-        System.out.println("the area of triangle3="+triangle3.getAreaOfTraingle());
+        System.out.println("the area of triangle1="+triangle1.getAreaOfTriangle());
+        System.out.println("the area of triangle2="+triangle2.getAreaOfTriangle());
+        System.out.println("the area of triangle3="+triangle3.getAreaOfTriangle());
     }
 }
