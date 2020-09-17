@@ -9,11 +9,17 @@ import java.util.Scanner;
 import java.util.Stack;
 
 class Maze {
-    int maze[][];
+    int[][] maze;
+    /**
+     * row is 横行数 row .
+     */
     private int row = 9;
+    /**
+     * col
+     */
     private int col = 8;
     Stack<Position> stack;
-    boolean blockDiagram[][] = null;
+    boolean[][] blockDiagram = null;
 
     public Maze() {
 
@@ -21,8 +27,9 @@ class Maze {
         blockDiagram = new boolean[15][15];
     }
 
-    /*
-     * 构造迷宫
+
+    /**
+     * 构造Maze
      */
     public void init() {
         Scanner scanner = new Scanner(System.in);
@@ -41,12 +48,13 @@ class Maze {
         }
     }
 
-    /*
-     * 回溯迷宫，查看是否有出路
+
+    /**
+     * 回溯Maze 看看是否有出路.
      */
     public void findPath() {
         // 给原始迷宫的周围家一圈围墙
-        int temp[][] = new int[row + 2][col + 2];
+        int[][] temp = new int[row + 2][col + 2];
         for (int i = 0; i < row + 2; ++i) {
             for (int j = 0; j < col + 2; ++j) {
                 temp[0][j] = 1;
@@ -66,7 +74,7 @@ class Maze {
         int j = 1;
         blockDiagram[i][j] = true;
         stack.push(new Position(i, j));
-        while (!stack.empty() && (!(i == (row) && (j == col)))) {
+        while (!stack.empty() && ((i != (row) && (j != col)))) {
 
             if ((temp[i][j + 1] == 0) && (blockDiagram[i][j + 1] == false)) {
                 blockDiagram[i][j + 1] = true;

@@ -6,6 +6,10 @@ package com.dengjiawen.mouseMaze;
  */
 
 class Position {
+
+    int row;
+
+    int col;
     public Position(){
 
     }
@@ -15,11 +19,11 @@ class Position {
         this.row = row;
     }
 
+    @Override
     public String toString(){
         return "(" + row + " ," + col + ")";
     }
 
-    int row;
-    int col;
+
 }
 

@@ -18,6 +18,7 @@
         <module>q-design-string原型类的设计与实现-06</module>
         <module>q-design-基于链栈实现老鼠走迷宫问题-07</module>
         <module>GreedySnack</module>
+        <module>backtrack_algorithm</module>
     </modules>
     <dependencies>
         <!-- log4j -->
