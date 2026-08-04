@@ -21,11 +21,16 @@
         <module>backtrack_algorithm</module>
     </modules>
     <dependencies>
-        <!-- log4j -->
+        <!-- Log4j 2 replaces the end-of-life Log4j 1.x dependency. -->
         <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>1.2.17</version>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.26.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.26.1</version>
         </dependency>
 <!--        in order to Take up a lot of words,do not use this!!!-->
 <!--        <dependency>-->

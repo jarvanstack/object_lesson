@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>q-design-基于链栈实现老鼠走迷宫问题-07</artifactId>
+    <artifactId>q-design-mouse-maze</artifactId>
 
 
 </project>
